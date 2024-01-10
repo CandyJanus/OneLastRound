@@ -1,13 +1,10 @@
 package data.scripts;
 
 import com.fs.starfarer.api.BaseModPlugin;
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
 import org.knowm.xchart.QuickChart;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.reflect.Method;
 
 public class OLR_ModPlugin extends BaseModPlugin {
     @Override
@@ -38,13 +35,11 @@ public class OLR_ModPlugin extends BaseModPlugin {
         double[] xData = new double[] { 0.0, 1.0, 2.0 };
         double[] yData = new double[] { 2.0, 1.0, 0.0 };
 
-//        Method quikChart= Operations.class.getDeclaredMethod();
-//
-//        // Create Chart
-//        XYChart chart = MethodHandle(QuickChart.getChart("Sample Chart", "X", "Y", "y(x)", xData, yData));
+        // Create Chart
+        XYChart chart = QuickChart.getChart("Sample Chart", "X", "Y", "y(x)", xData, yData);
 
-//        // Show it
-//        new SwingWrapper(chart).displayChart();
+        // Show it
+        new SwingWrapper(chart).displayChart();
     }
 }
 
